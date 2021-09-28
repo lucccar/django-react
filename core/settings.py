@@ -50,7 +50,13 @@ THIRDPARTY_APPS = [
 ]
 
 
-INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + 
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRDPARTY_APPS
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES':[
+        'rest_framework.permissions.IsAuthenticated',
+    ]
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
